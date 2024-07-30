@@ -1,382 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--    UNICONS-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!--    CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!--    FAVICON-->
+    <!--    TODO: To add-->
+
+    <title>Portfolio | Saahil Shroff</title>
+
+    <script src="assets/js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">SS</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <!-- <li>
+                    <a href="#">Home</a>
+                </li> -->
+                <li>
+                    <a href="#projects-section">Projects</a>
+                </li>
+                <li>
+                    <a href="#experience-section">Experience</a>
+                </li>
+                <li>
+                    <a href="#about-me-section">About Me</a>
+                </li>
+                <li>
+                    <a href="#contact-me-section">Contact Me</a>
+                </li>
+            </ul>
+            <a class="mobile-toggle" onclick="toggleMobileMenu();">
+                <img src="assets/images/hamburger-md-svgrepo-com.svg" alt="hamburger-icon" width="36px" height="36px">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero container" id="hero-section">
+            <div class="hero-yellow">
+                <img src="assets/images/saahil-shroff.png" alt="Saahil Shroff" width="100%">
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            <div class="hero-blue">
+                <div>
+                    <h1>
+                        <small>
+                            Hi! I'm
+                        </small>
+                        Saahil Shroff
+                    </h1>
+                    <medium>
+                        (he/him)
+                    </medium>
+                </div>
+                <div>
+                    <p>
+                        I have a multi disciplinary background spanning experience across different industries: B2B
+                        Travel, Finance, Biomedical Engineering and Research.
+                    </p>
+                    <p>
+                        Currently I'm working as a Product Manager @ American Express Global Business Travel.
+                    </p>
+                </div>
+
+                <div class="latest-experience">
+                    <div>
+                        <div class="latest-experience-heading">
+                            Currently working at:
+                        </div>
+                        <div class="latest-experience-info">
+                            <img src="assets/images/amex-gbt-logo.jpg"
+                                alt="American Express Global Business Travel Logo" width="96px">
+                            <div class="latest-experience-description">
+                                <p>American Express Global Business Travel</p>
+                                <small>Product Manager Intern</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-experience-container">
+                        <div class="latest-experience-heading">
+                            Graduated from:
+                        </div>
+                        <div class="latest-experience-info">
+                            <img src="assets/images/uDub.png" alt="University of Washington Logo" width="96px">
+                            <div class="latest-experience-description">
+                                <p>University of Washington</p>
+                                <small>Masters in Information Management</small>
+                                <smaller>(Specialization: Product Management)</smaller>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="header-content">
+                    <a href="https://drive.google.com/file/d/1oXxRsG-i-4UVUdY3trfNuxG6gdg93fg-/view?usp=sharing"
+                        target="_blank" class="resume-button">Resume</a>
+                    <div class="socials-container">
+                        <span>Socials:</span>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/saahilshroff/" target="_blank">
+                                <img src="assets/images/linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/tableau-icon-svgrepo-com.svg" alt="Tableau" class="social-icon">
+                            </a>
+                            <a href="https://www.github.com/saahilshroff" target="_blank">
+                                <img src="assets/images/github-142-svgrepo-com.svg" alt="Github" class="social-icon">
+                            </a>
+                            <!-- <a href="mailto:saahilshroff2023@gmail.com" target="_blank">
+                                <img src="assets/images/mail-svgrepo-com.svg" alt="Mail logo" class="social-icon">
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+        </section>
+
+        <section class="my-projects container" id="projects-section">
+            <h2>
+                <small>My</small>
+                Projects
+            </h2>
+            <div class="project">
+                <article>
+                    <figure>
+                        <div>
+                            <a href="#">
+                                <img src="assets/images/connection-svgrepo-com.svg" alt="Management & Strategy"
+                                    width="100%">
+                            </a>
+                        </div>
+                        <figcaption>Management & Strategy</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <div>
+                            <a href="#">
+                                <img src="assets/images/data-analysis-interface-symbol-of-a-monitor-with-a-bars-graphic-with-a-magnifier-svgrepo-com.svg"
+                                    alt="Data Analytics" width="100%">
+                            </a>
+                        </div>
+                        <figcaption>Data Analytics</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <div>
+                            <a href="#">
+                                <img src="assets/images/coding-svgrepo-com.svg" alt="Software Engineering" width="100%">
+                            </a>
+                        </div>
+                        <figcaption>Software Engineering</figcaption>
+                    </figure>
+                </article>
+
+                <!-- <article>
+                    <figure>
+                        <div>
+                            <a href="#">
+                                <img src="assets/images/biomedical-research.svg" alt="Biomedical Research" width="100%">
+                            </a>
+                        </div>
+                        <figcaption>Biomedical Research</figcaption>
+                    </figure>
+                </article> -->
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+        </section>
+
+        <section class="experience container" id="experience-section">
+            <h2>
+                <small>Professional</small>
+                Experience
+            </h2>
+
+            <div class="job-info">
+                <div class="job-logo">
+                    <img src="assets/images/amex-gbtg.png" alt="American Express Global Business Travel Logo">
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
+                <div class="job-description">
+                    <h3>American Express Global Business Travel</h3>
+                    <h4>Product Intern</h4>
+                    <small>June 2024 - Present</small>
+                    <ul>
+                        <li>Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...Co-created PSST
+                            (Physical Computing Streaming Sensor Data Toolkit)...Co-created PSST (Physical Computing
+                            Streaming Sensor Data Toolkit)...Co-created PSST (Physical Computing Streaming Sensor Data
+                            Toolkit)...Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...Co-created
+                            PSST (Physical Computing Streaming Sensor Data Toolkit)...Co-created PSST (Physical
+                            Computing Streaming Sensor Data Toolkit)...Co-created PSST (Physical Computing Streaming
+                            Sensor Data Toolkit)...Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...
+                        </li>
+                        <li>Programmed features that enabled BVI developers to filter sensor data...</li>
+                    </ul>
+                    <h4>Software Engineer Intern</h4>
+                    <small>June 2023 - June 2024</small>
+                    <ul>
+                        <li>Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...</li>
+                        <li>Programmed features that enabled BVI developers to filter sensor data...</li>
+                    </ul>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
+            </div>
+
+            <div class="job-info">
+                <div class="job-logo">
+                    <img src="assets/images/deloitte.jpeg" alt="Deloitte Logo">
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
+                <div class="job-description">
+                    <h3>Deloitte Consulting</h3>
+                    <h4>Analyst</h4>
+                    <small>January 2022 - September 2022</small>
+                    <ul>
+                        <li>Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...</li>
+                        <li>Programmed features that enabled BVI developers to filter sensor data...</li>
+                    </ul>
                 </div>
-              </article>
             </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+
+            <div class="job-info">
+                <div class="job-logo">
+                    <img src="assets/images/lntlogo.webp" alt="L&T group logo">
+                </div>
+                <div class="job-description">
+                    <h3>Larsen & Toubro Technology Services</h3>
+                    <h4>Software Engineer</h4>
+                    <small>August 2019 - December 2021</small>
+                    <ul>
+                        <li>Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...</li>
+                        <li>Programmed features that enabled BVI developers to filter sensor data...</li>
+                    </ul>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+
+            <div class="job-info">
+                <div class="job-logo">
+                    <img src="assets/images/IISc-logo.jpeg" alt="IISc logo">
+                </div>
+                <div class="job-description">
+                    <h3>Indian Institute of Science</h3>
+                    <h4>Product Developer and Research Intern</h4>
+                    <small>January 2019 - August 2019</small>
+                    <ul>
+                        <li>Co-created PSST (Physical Computing Streaming Sensor Data Toolkit)...</li>
+                        <li>Programmed features that enabled BVI developers to filter sensor data...</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+        </section>
+
+        <section class="about-me container" id="about-me-section">
+            <h2>
+                About Me
+            </h2>
+            <div class="about-me-info">
+                <div class="about-me-img">
+                    <img src="assets/images/saahil-shroff.png" alt="Saahil Shroff" width="48px">
+                </div>
+                <div class="about-me-description">
+                    <p>
+                        I am a Product Manager with a background in Software Engineering and Biomedical Engineering. I
+                        have experience working in the B2B Travel, Finance, Biomedical Engineering and Research
+                        industries.
+                    </p>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+        </section>
+
+        <section class="contact-me container" id="contact-me-section">
+            <h2>
+                Contact Me
+            </h2>
+            <div class="contact-me-info">
+                <h3>Let’s talk! &#x1F44B; </h3>
+                <img src="assets/images/saahil-shroff-headshot.png" alt="Image of Saahil Shroff" class="contact-me-img">
+                <p>Don’t hesitate to reach out with the contact information below, or send a message using the form.</p>
+                <h3>Get in Touch!</h3>
+                <div class="contact-icons">
+                    <a href="mailto:saahilshroff2023@gmail.com" target="_blank">
+                        <img src="assets/images/email-1-svgrepo-com.svg" alt="Email Icon"
+                            style="width: 48px; height: auto;">
+                    </a>
+                    <a href="https://www.linkedin.com/in/saahilshroff/" target="_blank">
+                        <img src="assets/images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon"
+                            style="width: 48px; height: auto;">
+                    </a>
+                </div>
+                <h3>Or shoot me a message below:</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" class="message-container">
+
+                    <input type="hidden" name="access_key" value="68b8f90a-6356-4096-951e-f7e14e4e5923">
+
+                    <label for="name" class="label-text">
+                        Name <span class="required-asterisk">*</span>
+                    </label>
+                    <input type="text" id="name" name="name" required class="name-input">
+
+                    <label for="email" class="label-text">
+                        Email <span class="required-asterisk">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required class="email-input">
+
+                    <label for="message" class="label-text">
+                        Message <span class="required-asterisk">*</span>
+                    </label>
+                    <textarea id="message" name="message" required class="message-input"></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+
+                </form>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
+        </section>
+    </main>
+    <script src="assets/js/scripts.js"></script>
+    <hr>
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="footer">
+            <div class="footer-text">
+                <p>
+                    &copy; 2<span>&#10084;</span>24 by Saahil Shroff. All rights reserved.
+                </p>
+                <p>
+                    Website best viewed on desktop & laptop.
+                </p>
+            </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
